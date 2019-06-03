@@ -47,6 +47,10 @@ nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gl :Glog<CR>
 nmap <Leader>gc :Gcommit<CR>
 nmap <Leader>gp :Git push<CR>
+nmap <Leader>gr :Git rebase master<CR>
+nmap <Leader>gri :Git rebase master -i<CR>
+nmap <Leader>gca :Gcommit --amend<CR>
+nmap <Leader>gpf :Git push -f<CR>
 map <Leader>rt :TagbarToggle<CR>
 map <D-/> <Esc>NERDComToggleComment<CR>
 imap <Leader>/ <Esc>NERDComToggleComment<CR>
