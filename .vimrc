@@ -2,6 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set number
+set hidden
 set ruler
 set splitright
 set hlsearch
@@ -40,12 +41,15 @@ nmap ; :Buffers<CR>
 nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
 nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
 nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
-nmap <leader>gb :Gblame<CR>
-nmap <leader>gs :Gstatus<CR>
-nmap <leader>gd :Gdiff<CR>
-nmap <leader>gl :Glog<CR>
-nmap <leader>gc :Gcommit<CR>
-nmap <leader>gp :Git push<CR>
+nmap <Leader>gb :Gblame<CR>
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gd :Gdiff<CR>
+nmap <Leader>gl :Glog<CR>
+nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>gp :Git push<CR>
+map <Leader>rt :TagbarToggle<CR>
+map <D-/> <Esc>NERDComToggleComment<CR>
+imap <Leader>/ <Esc>NERDComToggleComment<CR>
 
 set wildignore=*.o,*.obj,*.otf,*.eot,*.ttf,*.woff,*.svg,app/assets/images,app/assets/fonts,vendor,public,features,tmp,*.git,*.rbc,*.rbo,*.class,*.gem
 set wildignore+=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg,*~,._*
