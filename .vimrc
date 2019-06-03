@@ -3,6 +3,8 @@ syntax on
 filetype plugin indent on
 set number
 set hidden
+set exrc
+set autoread
 set ruler
 set splitright
 set hlsearch
@@ -95,6 +97,16 @@ set statusline+=Col:%v
 set statusline+=Buf:#%n
 set statusline+=[%b][0x%B]
 
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
+nmap ]g :GitGutterNextHunk<CR>
+nmap [g :GitGutterPrevHunk<CR>
+
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
@@ -103,3 +115,4 @@ set autoread
 au FocusGained,BufEnter * :silent! !
 
 let loaded_netrwPlugin = 1
+set secure
