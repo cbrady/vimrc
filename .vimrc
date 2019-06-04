@@ -1,6 +1,7 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+colorscheme gruvbox
 set number
 set hidden
 set exrc
@@ -16,6 +17,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set list
+set background=dark
 set backspace=indent,eol,start
 set listchars=""
 set listchars=tab:\ \
@@ -68,6 +70,8 @@ set rtp+=~/.fzf
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --ignore ",**/log/*,**/public/assets/*,**/tmp/capybara,**/tmp/miniprofiler/*,**/tmp/cache/*,**/node_modules/*"'
 endif
+
+let g:bruvbox_contrast_dark='dark'
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:fzf_buffers_jump = 1
